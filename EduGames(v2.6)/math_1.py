@@ -74,9 +74,9 @@ def calcul(mode) :
         repC = int(utilC.get())
         if repA == a and repB == b and repC == c :
             texte = "Indique la valeurs de Delta"
-            FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-            FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-            FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
+            FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+            FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+            FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
             ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
 
         else :
@@ -167,7 +167,7 @@ minijeu_1 = Tk()
 Init = Frame(minijeu_1)
 minijeu_1.title ("Trouve les illuminatis !")
 largeur,hauteur = 310,270
-minijeu_1.geometry ("%sx%s" %(largeur,hauteur))
+minijeu_1.geometry ("{0!s}x{1!s}".format(largeur, hauteur))
 minijeu_1.minsize (height=hauteur,width=largeur)
 minijeu_1.maxsize (height=hauteur,width=largeur)
 init()

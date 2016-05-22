@@ -72,7 +72,7 @@ class matterFrame():
                 sizeY-=10
                 iFrame.minsize(width=sizeX, height=sizeY)
                 iFrame.maxsize(width=sizeX, height=sizeY)
-                iFrame.geometry('%sx%s' % (sizeX, sizeY))
+                iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
                 iFrame.update()
                 sleep(0.03)
         if signe == '+':
@@ -81,7 +81,7 @@ class matterFrame():
                 sizeY+=10
                 iFrame.minsize(width=sizeX, height=sizeY)
                 iFrame.maxsize(width=sizeX, height=sizeY)
-                iFrame.geometry('%sx%s' % (sizeX, sizeY))
+                iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
                 iFrame.update()
                 sleep(0.03)
 
@@ -98,7 +98,7 @@ class matterFrame():
                 sizeY-=0
                 iFrame.minsize(width=sizeX, height=sizeY)
                 iFrame.maxsize(width=sizeX, height=sizeY)
-                iFrame.geometry('%sx%s' % (sizeX, sizeY))
+                iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
                 iFrame.update()
                 sleep(0.03)
         if signe == '+':
@@ -107,7 +107,7 @@ class matterFrame():
                 sizeY+=0
                 iFrame.minsize(width=sizeX, height=sizeY)
                 iFrame.maxsize(width=sizeX, height=sizeY)
-                iFrame.geometry('%sx%s' % (sizeX, sizeY))
+                iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
                 iFrame.update()
                 sleep(0.03)
 
@@ -135,7 +135,7 @@ class matterFrame():
         iFrame.title("EduGames - " + name)
         iFrame.wm_iconbitmap("images/EduGames_logo.ico")
         sizeX, sizeY = 340, 200
-        iFrame.geometry("%sx%s" % (sizeX, sizeY))
+        iFrame.geometry("{0!s}x{1!s}".format(sizeX, sizeY))
         iFrame.minsize(width=sizeX, height=sizeY)
         iFrame.maxsize(width=sizeX, height=sizeY)
 
