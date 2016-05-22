@@ -5,7 +5,7 @@ Pour l'instant il est possible de :
 
                                     - Pouvoir créer et se connecter à un profil
                                     
-                                   - Choisir parmis différents jeux
+                                    - Choisir parmis différents jeux
                                    
                                     - Voir un écran de statistiques de son porfil ( WIP )
 
