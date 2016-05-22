@@ -18,3 +18,6 @@ Jeux disponible :
 Toutes aide est la bienvenue, n'hésitez pas à tester, corriger, critiquer, .... Cela ne fera que nous améliorez!
 
 ~ L'équipe Work2Game
+
+
+# Utilisez EduGames.py pour tester !
