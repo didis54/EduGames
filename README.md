@@ -20,4 +20,4 @@ Toutes aide est la bienvenue, n'hésitez pas à tester, corriger, critiquer, ...
 ~ L'équipe Work2Game
 
 
-# Utilisez EduGames.py pour tester !
+# Utilisez EduGame.py pour tester !
