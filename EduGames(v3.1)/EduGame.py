@@ -46,7 +46,7 @@ def extendPlus(signe):
             sizeY += 4*nbRB-15
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
     elif signe == '-':
@@ -54,7 +54,7 @@ def extendPlus(signe):
             sizeY -= 4*nbRB-15
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
 
@@ -76,7 +76,7 @@ def createProfil():
         else:
             lv2 = str(varLV2.get())
         if cfg.has_section(name):
-            showerror("Erreur : Création de profil", "Le profil \"%s\" existe déjà. Choisissez un autre nom ou supprimez le profil existant." % name)
+            showerror("Erreur : Création de profil", "Le profil \"{0!s}\" existe déjà. Choisissez un autre nom ou supprimez le profil existant.".format(name))
         elif name == " " or name == "":
             showerror("Erreur : Création de profil", "Le champ de \"Nom de profil\" est vide. Veuillez choisir un nom pour créer un profil.")
         else:
@@ -88,7 +88,7 @@ def createProfil():
             cfg.set(name, "LV1", lv1)
             cfg.set(name, "LV2", lv2)
             cfg.write(open("profils.cfg", 'w'))
-            showinfo("Création de profil achevé", "Le profil \"%s\" à été créé avec succés ! Vous serrez connecté dans un instant." % name)
+            showinfo("Création de profil achevé", "Le profil \"{0!s}\" à été créé avec succés ! Vous serrez connecté dans un instant.".format(name))
             connect(name)
     else:
         showerror("Erreur : Création de profil", "Le nombre maximum de profils a été atteint. Pour créer un nouveau profil, veuillez supprimer un profil existant.")
@@ -112,7 +112,7 @@ def extend(signe):
             sizeY += 20
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
     elif signe == '-':
@@ -121,7 +121,7 @@ def extend(signe):
             sizeY -= 20
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
 
@@ -143,7 +143,7 @@ iFrame = Tk()
 iFrame.title("EduGame")
 iFrame.wm_iconbitmap("images/EduGames_logo.ico")
 sizeX, sizeY = 200, 200
-iFrame.geometry('%sx%s' % (sizeX, sizeY))
+iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
 
 """ ***** Fenêtre Principale ***** """
 mainFrame = Frame(iFrame)
