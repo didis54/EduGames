@@ -1,10 +1,19 @@
-﻿# Créé par psousaribeiro1, le 21/04/2016 en Python 3.2
+﻿#-------------------------------------------------------------------------------
+# Name:        EduGame.py
+# Purpose:     Création et/ou connection d'un profil.
+#
+# Author:      Pedro Filipe Ribeiro Sousa
+#
+# Created:     25/04/2016
+# Copyright:   © Copyright Pedro
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
 
 from tkinter import*
 from tkinter.messagebox import*
 from configparser import*
 from time import sleep
-from Matter import*
+import Matter
 import os.path as file
 
 cfg = ConfigParser()
@@ -128,7 +137,7 @@ def showLvLList():
 def connect(profileName):
     """ Se connect avec le profil choisit """
     iFrame.destroy()
-    matterFrame.open(profileName)
+    Matter.open(profileName)
 
 iFrame = Tk()
 iFrame.title("EduGame")

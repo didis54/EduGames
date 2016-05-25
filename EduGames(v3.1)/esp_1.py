@@ -1,11 +1,22 @@
-﻿# Créé par lhenrion3, le 29/04/2016 en Python 3.2
+﻿#-------------------------------------------------------------------------------
+# Name:        esp_1.py
+# Purpose:     Jeu du Pendu Espagnole
+#
+# Author:      Loris
+#
+# Created:     29/04/2016
+# Copyright:   © Copyright Loris
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
 
 from tkinter import*
 from random import*
-from Matter import*
+import Matter
+from configparser import*
+import os.path as file
 
 global partie_en_cours, mot_partiel, mot_choisi, nb_echecs, lettre_ds_mot,bouton, bravo, image_pendu, canevas, lettres, listes, afficher_mot, fenetre, bt_supp, init_jeu
-fichier = open("listes_all.txt", "r")
+fichier = open("listes_esp.txt", "r")
 listes = fichier.readlines()    # met tous les mots du fichier dans une liste
 fichier.close()
 bt_supp = []
@@ -31,15 +42,15 @@ def lettre_ds_mot(lettre):
         bt_supp.append(ord(lettre)-65)
         if mot_partiel == mot_choisi: # le mot à été trouvé
             partie_en_cours = False
-            canevas.itemconfig(bravo,text="Herzlichen Glückwunsch !")
-            partie_gagne = int(cfg.get(name, "all_gagne")) + 1
-            cfg.set(name, "all_gagne", str(partie_gagne))
+            canevas.itemconfig(bravo,text="¡Enhorabuena!")
+            partie_gagne = int(cfg.get(name, "esp_gagne")) + 1
+            cfg.set(name, "esp_gagne", str(partie_gagne))
             cfg.write(open("profils.cfg", 'w'))
         else:
             pass
     if not lettre_ds_mot:   # lettre fausse. Changer le dessin.
         nb_echecs += 1
-        nomFichier = "images/all/pendu_"+str(nb_echecs)+".gif"
+        nomFichier = "images/esp/pendu_"+str(nb_echecs)+".gif"
         photo = PhotoImage(file = nomFichier)
         image_pendu.config(image = photo)
         image_pendu.image = photo
@@ -52,12 +63,12 @@ def lettre_ds_mot(lettre):
                 else:
                     bouton[i].pack_forget()
             bt_supp = []
-            partie_perdu = int(cfg.get(name, "all_perdu")) + 1
-            cfg.set(name, "all_perdu", str(partie_perdu))
+            partie_perdu = int(cfg.get(name, "esp_perdu")) + 1
+            cfg.set(name, "esp_perdu", str(partie_perdu))
             cfg.write(open("profils.cfg", 'w'))
         elif mot_partiel == mot_choisi: # le mot à été trouvé
             partie_en_cours = False
-            canevas.itemconfig(bravo,text="Herzlichen Glückwunsch !")
+            canevas.itemconfig(bravo,text="¡Enhorabuena!")
             for i in range(26):
                 if i in bt_supp:
                     pass
@@ -93,7 +104,7 @@ def init_jeu():
     mot_choisi = mot_choisi.upper()
     mot_partiel = "-" * len(mot_choisi)
     afficher_mot(mot_partiel)
-    photo = PhotoImage(file = "images/all/pendu_0.gif")
+    photo = PhotoImage(file = "images/esp/pendu_0.gif")
     image_pendu.config(image = photo)
     image_pendu.image = photo
     canevas.itemconfig(bravo,text="")
@@ -105,21 +116,22 @@ def recommencer():
 
 def fermeture(profilName):
     fenetre.destroy()
+    Matter.open(profilName)
 
 def openFrame(profilName):
     global name
     name = profilName
     cfg.read("profils.cfg")
-    if "all_gagne" in cfg.options(profilName) and "all_perdu" in cfg.options(profilName):
+    if "esp_gagne" in cfg.options(profilName) and "esp_perdu" in cfg.options(profilName):
         pass
     else:
-        cfg.set(profilName, "all_gagne", '0')
-        cfg.set(profilName, "all_perdu", '0')
+        cfg.set(profilName, "esp_gagne", '0')
+        cfg.set(profilName, "esp_perdu", '0')
         cfg.write(open("profils.cfg", 'w'))
 
     global fenetre, bouton, canevas, lettres, image_pendu, bravo, photo
     fenetre = Tk()
-    fenetre.title("Die Gehenkten")
+    fenetre.title("El Ahorcado")
     fenetre.wm_iconbitmap("images/EduGames_logo.ico")
 
     canevas = Canvas(fenetre, bg = 'white', height = 500, width = 620)
@@ -127,12 +139,12 @@ def openFrame(profilName):
 
     bouton = [0]*26
 
-    bouton2 = Button(fenetre, text = 'Quitter', command = lambda:fermeture(profilName))
+    bouton2 = Button(fenetre, text = 'Retour', command = lambda:fermeture(profilName))
     bouton2.pack(side = RIGHT)
     bouton1 = Button(fenetre, text = 'Recommencer', command = recommencer)
     bouton1.pack(side = RIGHT)
 
-    photo = PhotoImage(file = "images/all/pendu_0.gif")
+    photo = PhotoImage(file = "images/esp/pendu_0.gif")
     image_pendu = Label(canevas, image=photo, border = 0)
     image_pendu.place(x = 120, y = 140)
     lettres = canevas.create_text(320, 60, text = "", fill = 'black', font = 'Courrier 30')
