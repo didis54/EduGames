@@ -148,7 +148,7 @@ def calcul(mode,essais) :
                     if essais == 0 :
                         texte = "Maintenant donne les valeurs de ces solutions"
 
-                    FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+                    FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
                     ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                     Sol1 = Entry(Etat,textvariable=utilSol1).place(x=60,y=hauteur/2+106,height=25,width=50)
                     Sol2 = Entry(Etat,textvariable=utilSol2).place(x=190,y=hauteur/2+106,height=25,width=50)
@@ -171,7 +171,7 @@ def calcul(mode,essais) :
                     if essais == 0 :
                         texte = "Bien tu a résolu cette équation !"
 
-                    FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+                    FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
                     ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                     reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
                     score()
@@ -194,9 +194,9 @@ def calcul(mode,essais) :
             if str(reelSol2) == repSol1 or str(reelSol2) == repSol2 :
 
                 texte = "Bien !! tu à résolu cette équation !"
-                FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
-                FinSol1 = Label (Etat,text="x' = %s" %reelSol1).place(x=10,y=hauteur/2+106,height=25,width=100)
-                FinSol2 = Label (Etat,text="x\" = %s" %reelSol2).place(x=140,y=hauteur/2+106,height=25,width=100)
+                FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
+                FinSol1 = Label (Etat,text="x' = {0!s}".format(reelSol1)).place(x=10,y=hauteur/2+106,height=25,width=100)
+                FinSol2 = Label (Etat,text="x\" = {0!s}".format(reelSol2)).place(x=140,y=hauteur/2+106,height=25,width=100)
                 ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                 reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
                 score()
@@ -237,7 +237,7 @@ def calcul(mode,essais) :
 
         if str(reelnbrSol) == repnbrSol :
 
-            FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+            FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
             ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
             Sol1 = Entry(Etat,textvariable=utilSol1).place(x=60,y=hauteur/2+106,height=25,width=50)
             Sol2 = Entry(Etat,textvariable=utilSol2).place(x=190,y=hauteur/2+106,height=25,width=50)
@@ -263,9 +263,9 @@ def calcul(mode,essais) :
             if str(reelSol2) == repSol1 or str(reelSol2) == repSol2 :
 
                 texte = "Bien !! tu à résolu cette équation !"
-                FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
-                FinSol1 = Label (Etat,text="x' = %s" %reelSol1).place(x=10,y=hauteur/2+106,height=25,width=100)
-                FinSol2 = Label (Etat,text="x\" = %s" %reelSol2).place(x=140,y=hauteur/2+106,height=25,width=100)
+                FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
+                FinSol1 = Label (Etat,text="x' = {0!s}".format(reelSol1)).place(x=10,y=hauteur/2+106,height=25,width=100)
+                FinSol2 = Label (Etat,text="x\" = {0!s}".format(reelSol2)).place(x=140,y=hauteur/2+106,height=25,width=100)
                 ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                 reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
                 score()
@@ -306,7 +306,7 @@ def calcul(mode,essais) :
 
         if str(reelnbrSol) == repnbrSol :
 
-            FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+            FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
             ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
             Sol1 = Entry(Etat,textvariable=utilSol1).place(x=60,y=hauteur/2+106,height=25,width=50)
             IndSol1 = Label (Etat,text="x' = ").place(x=10,y=hauteur/2+106,height=25,width=50)
@@ -326,8 +326,8 @@ def calcul(mode,essais) :
         if str(reelSol1) == repSol1 :
 
             texte = "Bien !! tu à résolu cette équation !"
-            FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
-            FinSol1 = Label (Etat,text="x' = %s" %reelSol1).place(x=10,y=hauteur/2+106,height=25,width=100)
+            FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
+            FinSol1 = Label (Etat,text="x' = {0!s}".format(reelSol1)).place(x=10,y=hauteur/2+106,height=25,width=100)
             ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
             reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
             score()
@@ -367,9 +367,9 @@ def calcul(mode,essais) :
                 texte = "Indique la valeurs de Delta"
 
             utilDelta = StringVar()
-            FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-            FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-            FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
+            FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+            FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+            FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
             ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
             D = Entry(Etat,textvariable=utilDelta).place(x=155,y=hauteur/2,height=25,width=50)
             IndD = Label (Etat,text="Delta = ").place(x=110,y=hauteur/2,height=25,width=40)
@@ -390,10 +390,10 @@ def calcul(mode,essais) :
                 texte = "Déduit en le nombre de solution possible"
 
             utilnbrSol=StringVar()
-            FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-            FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-            FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
-            FinD = Label(Etat,text="Delta = %s" %repD).place(x=110,y=hauteur/2,height=25,width=90)
+            FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+            FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+            FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
+            FinD = Label(Etat,text="Delta = {0!s}".format(repD)).place(x=110,y=hauteur/2,height=25,width=90)
             ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
             nbrSol = Entry(Etat,textvariable=utilnbrSol).place(x=190,y=hauteur/2+38,height=25,width=25)
             IndnbrSol = Label (Etat,text="Nombre de\n solution :").place(x=110,y=hauteur/2+28,height=50,width=75)
@@ -415,11 +415,11 @@ def calcul(mode,essais) :
                     texte = "Maintenant donne la valeur de la solution"
 
                 calculSol(1)
-                FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-                FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-                FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
-                FinD = Label (Etat,text="Delta = %s" %repD).place(x=110,y=hauteur/2,height=25,width=90)
-                FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+                FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+                FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+                FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
+                FinD = Label (Etat,text="Delta = {0!s}".format(repD)).place(x=110,y=hauteur/2,height=25,width=90)
+                FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
                 ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                 Sol1 = Entry(Etat,textvariable=utilSol1).place(x=150,y=hauteur/2+106,height=25,width=50)
                 IndSol1 = Label (Etat,text="x' = ").place(x=50,y=hauteur/2+106,height=25,width=50)
@@ -428,11 +428,11 @@ def calcul(mode,essais) :
             if reelnbrSol == 0 :
 
                 texte = "Bien !! tu à résolu cette équation !"
-                FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-                FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-                FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
-                FinD = Label (Etat,text="Delta = %s" %repD).place(x=110,y=hauteur/2,height=25,width=90)
-                FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+                FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+                FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+                FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
+                FinD = Label (Etat,text="Delta = {0!s}".format(repD)).place(x=110,y=hauteur/2,height=25,width=90)
+                FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
                 ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                 reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
                 score()
@@ -445,11 +445,11 @@ def calcul(mode,essais) :
                 calculSol(2)
                 utilSol1 = StringVar()
                 utilSol2 = StringVar()
-                FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-                FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-                FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
-                FinD = Label (Etat,text="Delta = %s" %repD).place(x=110,y=hauteur/2,height=25,width=90)
-                FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
+                FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+                FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+                FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
+                FinD = Label (Etat,text="Delta = {0!s}".format(repD)).place(x=110,y=hauteur/2,height=25,width=90)
+                FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
                 ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                 Sol1 = Entry(Etat,textvariable=utilSol1).place(x=60,y=hauteur/2+106,height=25,width=50)
                 Sol2 = Entry(Etat,textvariable=utilSol2).place(x=190,y=hauteur/2+106,height=25,width=50)
@@ -474,12 +474,12 @@ def calcul(mode,essais) :
             if repSol1 == str(reelSol1) :
 
                 texte = "Bien !! tu à résolu cette équation !"
-                FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-                FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-                FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
-                FinD = Label (Etat,text="Delta = %s" %repD).place(x=110,y=hauteur/2,height=25,width=90)
-                FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
-                FinSol1 = Label (Etat,text="x' = %s" %reelSol1).place(x=10,y=hauteur/2+106,height=25,width=25)
+                FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+                FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+                FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
+                FinD = Label (Etat,text="Delta = {0!s}".format(repD)).place(x=110,y=hauteur/2,height=25,width=90)
+                FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
+                FinSol1 = Label (Etat,text="x' = {0!s}".format(reelSol1)).place(x=10,y=hauteur/2+106,height=25,width=25)
                 ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                 reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
                 score()
@@ -496,13 +496,13 @@ def calcul(mode,essais) :
                 if str(reelSol2) == repSol1 or str(reelSol2) == repSol2 :
 
                     texte = "Bien !! tu à résolu cette équation !"
-                    FinA= Label (Etat,text="a = %s" %repA).place(x=10,y=hauteur/2,height=25,width=50)
-                    FinB= Label (Etat,text="b = %s" %repB).place(x=10,y=hauteur/2+38,height=25,width=50)
-                    FinC= Label (Etat,text="c = %s" %repC).place(x=10,y=hauteur/2+76,height=25,width=50)
-                    FinD = Label (Etat,text="Delta = %s" %repD).place(x=110,y=hauteur/2,height=25,width=90)
-                    FinnbrSol = Label (Etat,text="Nombre de\n solution : %s" %repnbrSol).place(x=110,y=hauteur/2+28,height=75,width=75)
-                    FinSol1 = Label (Etat,text="x' = %s" %reelSol1).place(x=10,y=hauteur/2+106,height=25,width=100)
-                    FinSol2 = Label (Etat,text="x\" = %s" %reelSol2).place(x=140,y=hauteur/2+106,height=25,width=100)
+                    FinA= Label (Etat,text="a = {0!s}".format(repA)).place(x=10,y=hauteur/2,height=25,width=50)
+                    FinB= Label (Etat,text="b = {0!s}".format(repB)).place(x=10,y=hauteur/2+38,height=25,width=50)
+                    FinC= Label (Etat,text="c = {0!s}".format(repC)).place(x=10,y=hauteur/2+76,height=25,width=50)
+                    FinD = Label (Etat,text="Delta = {0!s}".format(repD)).place(x=110,y=hauteur/2,height=25,width=90)
+                    FinnbrSol = Label (Etat,text="Nombre de\n solution : {0!s}".format(repnbrSol)).place(x=110,y=hauteur/2+28,height=75,width=75)
+                    FinSol1 = Label (Etat,text="x' = {0!s}".format(reelSol1)).place(x=10,y=hauteur/2+106,height=25,width=100)
+                    FinSol2 = Label (Etat,text="x\" = {0!s}".format(reelSol2)).place(x=140,y=hauteur/2+106,height=25,width=100)
                     ABC = Label (Etat,text=texte,fg="red").place(x=0,y=hauteur/4,height=25,width=largeur)
                     reboot = Button(Etat,text="Recommencer",command=recommencer).place(x=largeur/2-56,y=hauteur/2-25,height=25,width=112)
                     score()
@@ -617,7 +617,7 @@ def openframe(profilName) :
     Init = Frame(minijeu_1)
     minijeu_1.title ("Trouve les illuminatis !")
     largeur,hauteur = 310,270
-    minijeu_1.geometry ("%sx%s" %(largeur,hauteur))
+    minijeu_1.geometry ("{0!s}x{1!s}".format(largeur, hauteur))
     minijeu_1.minsize (height=hauteur,width=largeur)
     minijeu_1.maxsize (height=hauteur,width=largeur)
     init()
