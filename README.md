@@ -21,3 +21,6 @@ Toutes aide est la bienvenue, n'hésitez pas à tester, corriger, critiquer, ...
 
 
 # Utilisez EduGame.py pour tester !
+
+
+Et surtout n'oubliez pas ... Johan est une cacahuète!
