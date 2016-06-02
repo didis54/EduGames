@@ -1,5 +1,3 @@
-https://www.quantifiedcode.com/api/v1/project/7527f5910f9e4a869e83058967a58f45/analyze
-
 EduGames est un projet de jeu à but éducatif.
 Codé en Python et avec l'utilisation du module tkinter
 
