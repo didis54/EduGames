@@ -84,7 +84,7 @@ def extend(signe):
             sizeY-=10
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
     if signe == '+':
@@ -93,7 +93,7 @@ def extend(signe):
             sizeY+=10
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
 
@@ -110,7 +110,7 @@ def extendStat(signe):
             sizeY-=0
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
     if signe == '+':
@@ -119,7 +119,7 @@ def extendStat(signe):
             sizeY+=0
             iFrame.minsize(width=sizeX, height=sizeY)
             iFrame.maxsize(width=sizeX, height=sizeY)
-            iFrame.geometry('%sx%s' % (sizeX, sizeY))
+            iFrame.geometry('{0!s}x{1!s}'.format(sizeX, sizeY))
             iFrame.update()
             sleep(0.03)
 
@@ -167,7 +167,7 @@ def open(profilName):
     iFrame.title("EduGames - " + name)
     iFrame.wm_iconbitmap("images/EduGames_logo.ico")
     sizeX, sizeY = 340, 200
-    iFrame.geometry("%sx%s" % (sizeX, sizeY))
+    iFrame.geometry("{0!s}x{1!s}".format(sizeX, sizeY))
     iFrame.minsize(width=sizeX, height=sizeY)
     iFrame.maxsize(width=sizeX, height=sizeY)
 
